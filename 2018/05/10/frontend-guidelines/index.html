@@ -154,7 +154,7 @@
 <meta property="og:site_name" content="rithen&#39;s blog">
 <meta property="og:description" content="编写灵活、稳定、高质量的 HTML 、CSS 和 Javascript 代码的规范。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-11T02:39:02.950Z">
+<meta property="og:updated_time" content="2018-05-14T08:52:42.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="frontend-guidelines">
 <meta name="twitter:description" content="编写灵活、稳定、高质量的 HTML 、CSS 和 Javascript 代码的规范。">
@@ -551,6 +551,27 @@
 </ul>
 <p>@import 引入的文件不需要开头的’_’和结尾的’.scss’；<br>嵌套最多不能超过5层；<br>@extend 中使用placeholder选择器；<br>去掉不必要的父级引用符号’&amp;’。</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* not good */</span></span><br><span class="line">@<span class="keyword">import</span> <span class="string">"_dialog.scss"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* good */</span></span><br><span class="line">@<span class="keyword">import</span> <span class="string">"dialog"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* not good */</span></span><br><span class="line"><span class="selector-class">.fatal</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> .error;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* good */</span></span><br><span class="line"><span class="selector-class">.fatal</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> %error;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a><span id="javascript">Javascript</span></h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>js校检工具可以帮助我们避免一些愚蠢的错误，确保一个项目遵循代码规范。<br>流行的js校检工具有：</p>
+<ul>
+<li>JSLint</li>
+<li>JSHint</li>
+<li>JSCS</li>
+<li>ESLint</li>
+</ul>
+<p>推荐使用ESLint，它灵活性高，任何规则都可以开启闭合，而且支持ES6最广泛，也是唯一支持JSX的工具，现在越来越多的公司和项目都开始使用eslint。</p>
+<p>eslint规则可以自己定制，也可以用第三方定制的，或者一些大牛开源的规范(如standard, Airbnb的eslint规则)。</p>
+<h4 id="vue项目里的eslint"><a href="#vue项目里的eslint" class="headerlink" title="vue项目里的eslint"></a>vue项目里的eslint</h4><p>vue-cli在init初始化时，会询问是否添加ESLint，确认之后在创建的项目中会有.eslintignore和.eslintrc.js两个文件。一个忽略一些eslint检查，一个是eslint的配置文件。<br>vue-cli的eslint规则继承了<a href="https://github.com/standard/standard" target="_blank" rel="noopener">standard</a>规则 和 官方自己的 <a href="https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention" target="_blank" rel="noopener">eslint-plugin-vue</a>。</p>
+<p><strong> <font color="blue">standard细则</font> </strong><br>中文文档：<br>link: <a href="https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md" target="_blank" rel="noopener">standard-doc-zhcn ~ Github</a></p>
+<h4 id="其他项目"><a href="#其他项目" class="headerlink" title="其他项目"></a>其他项目</h4><p>推荐使用airbnb的eslint，70K+ stars，支持 ES6 和 React， ES6例子很详细<br>不过文档是英文的<br>link: <a href="https://github.com/airbnb/javascript" target="_blank" rel="noopener">airbnb - javascript ~ Github</a></p>
+<h3 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a><span id="ide">IDE</span></h3><p>常用前端开发工具：</p>
+<ul>
+<li>Sublime Text</li>
+<li>Atom</li>
+<li>Visual Studio Code</li>
+<li>Vim</li>
+<li>WebStorm</li>
+</ul>
+<p>推荐使用 vs code ,插件丰富，不用翻墙。</p>
 
       
     </div>
@@ -577,22 +598,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/05/09/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -666,7 +671,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -721,7 +726,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命名规则"><span class="nav-number">1.1.</span> <span class="nav-text">命名规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#项目命名"><span class="nav-number">1.1.1.</span> <span class="nav-text">项目命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目录命名"><span class="nav-number">1.1.2.</span> <span class="nav-text">目录命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS文件命名"><span class="nav-number">1.1.3.</span> <span class="nav-text">JS文件命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS-SCSS文件命名"><span class="nav-number">1.1.4.</span> <span class="nav-text">CSS, SCSS文件命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML文件命名"><span class="nav-number">1.1.5.</span> <span class="nav-text">HTML文件命名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML"><span class="nav-number">1.2.</span> <span class="nav-text">HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法"><span class="nav-number">1.2.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML5-doctype"><span class="nav-number">1.2.2.</span> <span class="nav-text">HTML5 doctype</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lang属性"><span class="nav-number">1.2.3.</span> <span class="nav-text">lang属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IE-兼容模式"><span class="nav-number">1.2.4.</span> <span class="nav-text">IE 兼容模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符编码"><span class="nav-number">1.2.5.</span> <span class="nav-text">字符编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引入-CSS-和-JavaScript-文件"><span class="nav-number">1.2.6.</span> <span class="nav-text">引入 CSS 和 JavaScript 文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#属性顺序"><span class="nav-number">1.2.7.</span> <span class="nav-text">属性顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#boolean属性"><span class="nav-number">1.2.8.</span> <span class="nav-text">boolean属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS生成标签"><span class="nav-number">1.2.9.</span> <span class="nav-text">JS生成标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#减少标签数量"><span class="nav-number">1.2.10.</span> <span class="nav-text">减少标签数量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS-SCSS"><span class="nav-number">1.3.</span> <span class="nav-text">CSS, SCSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明顺序"><span class="nav-number">1.3.2.</span> <span class="nav-text">声明顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#属性简写"><span class="nav-number">1.3.3.</span> <span class="nav-text">属性简写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#媒体查询"><span class="nav-number">1.3.4.</span> <span class="nav-text">媒体查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SCSS相关"><span class="nav-number">1.3.5.</span> <span class="nav-text">SCSS相关</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命名规则"><span class="nav-number">1.1.</span> <span class="nav-text">命名规则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#项目命名"><span class="nav-number">1.1.1.</span> <span class="nav-text">项目命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目录命名"><span class="nav-number">1.1.2.</span> <span class="nav-text">目录命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS文件命名"><span class="nav-number">1.1.3.</span> <span class="nav-text">JS文件命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS-SCSS文件命名"><span class="nav-number">1.1.4.</span> <span class="nav-text">CSS, SCSS文件命名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML文件命名"><span class="nav-number">1.1.5.</span> <span class="nav-text">HTML文件命名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML"><span class="nav-number">1.2.</span> <span class="nav-text">HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法"><span class="nav-number">1.2.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML5-doctype"><span class="nav-number">1.2.2.</span> <span class="nav-text">HTML5 doctype</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lang属性"><span class="nav-number">1.2.3.</span> <span class="nav-text">lang属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IE-兼容模式"><span class="nav-number">1.2.4.</span> <span class="nav-text">IE 兼容模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符编码"><span class="nav-number">1.2.5.</span> <span class="nav-text">字符编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引入-CSS-和-JavaScript-文件"><span class="nav-number">1.2.6.</span> <span class="nav-text">引入 CSS 和 JavaScript 文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#属性顺序"><span class="nav-number">1.2.7.</span> <span class="nav-text">属性顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#boolean属性"><span class="nav-number">1.2.8.</span> <span class="nav-text">boolean属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JS生成标签"><span class="nav-number">1.2.9.</span> <span class="nav-text">JS生成标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#减少标签数量"><span class="nav-number">1.2.10.</span> <span class="nav-text">减少标签数量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS-SCSS"><span class="nav-number">1.3.</span> <span class="nav-text">CSS, SCSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明顺序"><span class="nav-number">1.3.2.</span> <span class="nav-text">声明顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#属性简写"><span class="nav-number">1.3.3.</span> <span class="nav-text">属性简写</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#媒体查询"><span class="nav-number">1.3.4.</span> <span class="nav-text">媒体查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SCSS相关"><span class="nav-number">1.3.5.</span> <span class="nav-text">SCSS相关</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Javascript"><span class="nav-number">1.4.</span> <span class="nav-text">Javascript</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.4.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue项目里的eslint"><span class="nav-number">1.4.2.</span> <span class="nav-text">vue项目里的eslint</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他项目"><span class="nav-number">1.4.3.</span> <span class="nav-text">其他项目</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IDE"><span class="nav-number">1.5.</span> <span class="nav-text">IDE</span></a></li></ol></li></ol></div>
             
 
           </div>
